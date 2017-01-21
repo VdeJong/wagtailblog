@@ -1,7 +1,7 @@
 # Wagtail Blog
 
 ## About
-This is a Blog build with Python/Django and uses Wagtail as CMS.
+This is a Blog built with Python/Django and uses Wagtail as CMS.
 
 ## Setup
 Make sure you have [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/) and [wagtail](http://docs.wagtail.io/en/latest/getting_started/tutorial.html) installed.
