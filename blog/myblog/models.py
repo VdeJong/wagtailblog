@@ -1,4 +1,6 @@
+from django.conf import settings
 from django.db import models
+from django.contrib.auth import get_user_model
 
 from modelcluster.fields import ParentalKey
 from modelcluster.tags import ClusterTaggableManager
@@ -49,6 +51,12 @@ class BlogPage(Page):
     intro = models.CharField(max_length=250)
     body = RichTextField(blank=True)
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL
+    )
 
     def main_image(self):
         gallery_item = self.gallery_images.first()
@@ -69,6 +77,7 @@ class BlogPage(Page):
         ], heading="Blog information"),
         FieldPanel('intro'),
         FieldPanel('body', classname="full"),
+        FieldPanel('author'),
         InlinePanel('gallery_images', label="Gallery images")
     ]
 
