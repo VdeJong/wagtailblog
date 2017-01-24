@@ -134,6 +134,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
+# Login/logout redirect
+LOGIN_REDIRECT_URL = '/blog'
+LOGOUT_REDIRECT_URL = '/'
+
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "blog"
