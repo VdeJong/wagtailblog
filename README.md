@@ -5,7 +5,7 @@ This is a Blog built with Python/Django and uses Wagtail as CMS.
 
 ## Setup
 Make sure you have [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/) and [wagtail](http://docs.wagtail.io/en/latest/getting_started/tutorial.html) installed.
-   1. `$ git pull https://github.com/VdeJong/wagtailblog.git`
+   1. `$ git clone https://github.com/VdeJong/wagtailblog.git`
    2. Go to the directory where you saved this repository
    3. Setup virtualenv named wagtailblog `$ virtualenv wagtailblog`
    4. Activate virtualenv `$ source wagtailblog/bin/activate`
