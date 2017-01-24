@@ -30,5 +30,9 @@
         </div>
     {% endfor %}
 
+    <p>
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span>Add post</a>
+    </p>
+
     <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
 {% endblock %}

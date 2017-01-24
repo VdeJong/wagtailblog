@@ -5,6 +5,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
+from blog.myblog import urls
+
 from search import views as search_views
 from wagtail.wagtailadmin import urls as wagtailadmin_urls
 from wagtail.wagtailcore import urls as wagtail_urls
@@ -14,6 +16,8 @@ urlpatterns = [
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^accounts/logout/$', auth_views.logout, name='logout'),
+
+    url(r'^post/new/$', include(urls)),
 
     url(r'^django-admin/', include(admin.site.urls)),
     url(r'^admin/', include(wagtailadmin_urls)),
